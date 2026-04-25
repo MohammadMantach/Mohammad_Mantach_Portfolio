@@ -1,0 +1,30 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64">
+      <stop offset="0%" stop-color="#0A0F1F"></stop>
+      <stop offset="100%" stop-color="#111A3A"></stop>
+    </linearGradient>
+
+    <linearGradient id="text" x1="0" y1="0" x2="64" y2="64">
+      <stop offset="0%" stop-color="#4DA3FF"></stop>
+      <stop offset="100%" stop-color="#A855F7"></stop>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="coloredBlur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Rounded background -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"></rect>
+
+  <!-- Code symbol -->
+  <text x="50%" y="52%" text-anchor="middle" dominant-baseline="middle" font-family="monospace" font-size="26" fill="url(#text)" filter="url(#glow)">
+    &lt;/&gt;
+  </text>
+</svg>
