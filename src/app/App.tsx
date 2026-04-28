@@ -41,7 +41,7 @@ export default function App() {
   const downloadCV = async () => {
     try {
       // Fetch the PDF as ArrayBuffer to preserve binary data
-      const response = await fetch('/Mohammad_Mantach_CV.pdf');
+      const response = await fetch('/MohammadMantach_cv.pdf');
       const arrayBuffer = await response.arrayBuffer();
 
       // Create blob from ArrayBuffer with correct MIME type
@@ -53,7 +53,7 @@ export default function App() {
       // Create temporary link and trigger download
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'Mohammad_Mantach_CV.pdf';
+      link.download = 'MohammadMantach_cv.pdf';
       document.body.appendChild(link);
       link.click();
 
@@ -63,7 +63,7 @@ export default function App() {
     } catch (error) {
       console.error('Download failed:', error);
       // Fallback: direct link
-      window.location.href = '/Mohammad_Mantach_CV.pdf';
+      window.location.href = '/MohammadMantach_cv.pdf';
     }
   };
 
@@ -247,7 +247,7 @@ export default function App() {
 
         {/* View CV in Browser Button - Alternative option */}
         <motion.a
-          href="/Mohammad_Mantach_CV.pdf"
+          href="/MohammadMantach_cv.pdf"
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, y: -20 }}
